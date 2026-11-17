@@ -37,3 +37,17 @@ header{background-color:#00a4ff;background-image:radial-gradient(circle at 1px 1
 @keyframes category-drift{0%,100%{translate:-3px 3px;rotate:-.6deg}33%{translate:3px -6px;rotate:.8deg}68%{translate:1px 5px;rotate:-.3deg}}
 @media(max-width:620px){.folders>.folder.active,.folders>.folder.active:hover{scale:1.025}}
 @media(prefers-reduced-motion:reduce){.folders>.folder{animation:none!important;translate:none;rotate:none;will-change:auto}.folders>.folder.active{scale:1.025}}
+/* Keep all three category folders together on small screens. */
+@media(max-width:620px){
+ .folders{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:stretch;margin-top:42px}
+ .folders>.folder,.folders>.folder:nth-child(2),.folders>.folder:nth-child(3){min-width:0;min-height:214px;padding:15px 10px 12px;border-radius:2px 10px 10px 10px;display:flex;flex-direction:column}
+ .folders>.folder:before{width:49%;height:17px;top:-17px;border-radius:9px 16px 0 0}
+ .folders .folder-number{display:block;font-size:7px;line-height:1.6;letter-spacing:0;min-height:34px;overflow-wrap:anywhere}
+ .folders .folder strong{font-size:clamp(15px,3.8vw,22px);line-height:1.3;letter-spacing:0;width:100%;max-width:none;margin:13px 0 7px;min-height:2.6em;word-break:normal}
+ .folders .folder small{font-size:8px;line-height:1.65;max-width:none;margin:0 0 10px;overflow-wrap:anywhere}
+ .folders .folder-foot{font-size:8px;line-height:1.4;padding-top:9px;margin-top:auto;gap:3px}
+ .folders .folder-foot b{width:21px;height:22px;flex-shrink:0;font-size:18px}
+ .folders .folder-illustration{position:relative;display:block;order:4;width:24px;align-self:flex-end;top:auto;right:auto;margin-top:8px}
+ .folders>.folder.active,.folders>.folder.active:hover{scale:1.025}
+}
+@media(max-width:360px){.folders{gap:9px}.folders>.folder,.folders>.folder:nth-child(2),.folders>.folder:nth-child(3){padding:13px 7px 10px}.folders .folder-foot{font-size:7px}.folders .folder-foot b{width:18px;height:20px}.folders .folder-number{font-size:6px}}
