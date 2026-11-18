@@ -124,3 +124,18 @@ html.intro-playing,html.intro-playing body{overflow:hidden}
 @media(max-width:620px){.intro-prototype-mode .intro-prototype{width:min(158vw,calc(100dvh * 1.28));height:auto;left:54%;top:50%}}
 
 .intro-prototype-mode .proto-file-title{stroke:none;paint-order:normal}
+
+/* Homepage folder: a fixed canvas scaled uniformly with its container. */
+.hero-grid>a.hero-art{width:100%;height:auto;min-height:0;aspect-ratio:520 / 430;max-width:none}
+.hero-art-canvas{position:absolute;left:0;top:0;width:520px;height:430px;transform:scale(var(--hero-art-scale,1));transform-origin:top left;isolation:isolate}
+.hero-art-canvas .folder-back{left:26px;top:112px;width:468px;height:258px;border-radius:15px;transform:rotate(-9deg)}
+.hero-art-canvas .folder-back:before{top:-39px;height:43px;width:173px}
+.hero-art-canvas .big-folder{left:26px;top:124px;width:468px;height:255px;border-radius:16px 18px 20px 20px;transform:rotate(-9deg);animation:hero-folder-rigid-mouth 6.6s ease-in-out infinite}
+.hero-art:hover .hero-art-canvas .big-folder{animation:hero-folder-rigid-open .7s ease both}
+.hero-art-canvas .folder-content{padding:27px 30px}.hero-art-canvas .folder-content>span{font-size:10px;letter-spacing:2px}.hero-art-canvas .folder-content strong{font-size:40px;margin-top:23px;line-height:normal}.hero-art-canvas .folder-content p{font-size:12px;letter-spacing:2px;margin:12px 0}.hero-art-canvas .folder-content>div{font-size:11px;margin-top:25px;padding-top:12px}.hero-art-canvas .folder-content b{font-size:25px}
+.hero-art-canvas .paper-track{width:520px;height:430px}.hero-art-canvas .paper{top:68px;left:73px;width:359px;height:250px;padding:23px 26px}.hero-art-canvas .paper-two{top:72px;left:57px}.hero-art-canvas .paper strong{font-size:31px;margin-top:15px}.hero-art-canvas .paper>span{font-size:9px;letter-spacing:1.5px}.hero-art-canvas .paper>span:last-child{margin-top:25px}
+.hero-art-canvas .orbit{right:-5px;top:-11px;font-size:13px;line-height:1.25}.hero-art .hero-art-canvas .bulb{right:-12px;bottom:26px;font-size:95px}.hero-art-canvas .art-note{bottom:-18px;right:20px;font-size:11px;letter-spacing:1px}
+@keyframes hero-folder-rigid-mouth{0%,48%,64%,100%{transform:rotate(-9deg)}18%,31%,80%,88%{transform:rotate(-7deg)}}
+@keyframes hero-folder-rigid-open{to{transform:rotate(-7deg)}}
+@media(max-width:620px){.hero-grid>a.hero-art{width:90%;height:auto;min-height:0;max-width:430px;aspect-ratio:520 / 430;margin:67px auto 0}}
+@media(prefers-reduced-motion:reduce){.hero-art-canvas .big-folder{animation:none!important}}
