@@ -122,3 +122,5 @@ html.intro-playing,html.intro-playing body{overflow:hidden}
 .intro-prototype-mode .proto-file-number{fill:#aa7812;font-weight:400}.intro-prototype-mode .proto-file-title{fill:#aa7812;font-weight:400;stroke:#e9be59;stroke-width:.35;paint-order:fill stroke}
 .intro-prototype-mode .proto-main-front{filter:drop-shadow(-7px -4px 0 #a9761930)}
 @media(max-width:620px){.intro-prototype-mode .intro-prototype{width:min(158vw,calc(100dvh * 1.28));height:auto;left:54%;top:50%}}
+
+.intro-prototype-mode .proto-file-title{stroke:none;paint-order:normal}
