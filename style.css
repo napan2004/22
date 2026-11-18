@@ -114,3 +114,11 @@ html.intro-playing,html.intro-playing body{overflow:hidden}
 .proto-title-letter{transform-box:fill-box;transform-origin:center;will-change:transform,opacity}
 .intro-blue-flash{position:absolute;inset:0;z-index:20;background:#00a4ff;opacity:0;pointer-events:none}
 @media(max-width:620px){.intro-prototype-mode .intro-topline{font-size:7px}.intro-prototype-mode .intro-bottomline{font-size:7px}.intro-prototype-mode .intro-bottomline p{font-size:10px}.intro-prototype{width:min(100vw,calc(100dvh * 1.057));height:auto;top:51%}}
+
+/* Opening color/scale pass: deeper gold lettering, blue backdrop, darker lower layers. */
+#site-intro.intro-prototype-mode{background-color:#00a4ff;color:#fff;background-image:radial-gradient(circle at 1px 1px,#00438938 .85px,transparent 1.15px)}
+.intro-prototype-mode .intro-topline button{background:#0094e2;color:#fff;border-color:#ffffff90}.intro-prototype-mode .intro-bottomline{color:#fff}.intro-prototype-mode .intro-progress{background:#ffffff35}.intro-prototype-mode .intro-progress i{background:#ffdf4c}
+.intro-prototype-mode .intro-prototype{width:min(1600px,158vw,calc(100dvh * 1.28));height:auto;aspect-ratio:1100 / 1040;top:46%;left:50%}
+.intro-prototype-mode .proto-file-number{fill:#aa7812;font-weight:400}.intro-prototype-mode .proto-file-title{fill:#aa7812;font-weight:400;stroke:#e9be59;stroke-width:.35;paint-order:fill stroke}
+.intro-prototype-mode .proto-main-front{filter:drop-shadow(-7px -4px 0 #a9761930)}
+@media(max-width:620px){.intro-prototype-mode .intro-prototype{width:min(158vw,calc(100dvh * 1.28));height:auto;left:54%;top:50%}}
